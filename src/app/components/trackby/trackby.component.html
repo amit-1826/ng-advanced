@@ -1,0 +1,11 @@
+<div>
+  Planets List
+
+  <button (click)="refreshList()" type="button">Refresh (and inspect element)</button>
+
+  <ul>
+    <li *ngFor="let planet of planets; trackBy: trackByUser">
+      {{planet.name}}
+    </li>
+  </ul>
+</div>
