@@ -32,6 +32,7 @@ export class EvenOddDirective {
   }
 
   onMouseOver() {
+    
     if (this.number && this.number % this.divisibleBy === 0) {
       this.elementRef.nativeElement.style.color = 'blue'
     } else {
