@@ -7,8 +7,12 @@
 
 <p>This is paragraph from main component.</p>
 
-<app-view-none></app-view-none>
+<app-view-none [bankName]="'Set by inputs property with no @ input property binding'"></app-view-none>
 <app-view-emulated></app-view-emulated>
 <app-view-shadow-dom></app-view-shadow-dom>
+
+
+<p>  Custom string interpolation</p>
+$name$
 
 <router-outlet></router-outlet>
