@@ -12,6 +12,9 @@ import {AccessDeniedComponent} from './components/access-denied/access-denied.co
 import {HTTP_INTERCEPTORS, HttpClientModule} from "@angular/common/http";
 import {HttpInterceptor} from "./http.interceptor";
 import { TrackbyComponent } from './components/trackby/trackby.component';
+import { ViewNoneComponent } from './components/encapsulation/view-none/view-none.component';
+import { ViewEmulatedComponent } from './components/encapsulation/view-emulated/view-emulated.component';
+import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-dom/view-shadow-dom.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +25,10 @@ import { TrackbyComponent } from './components/trackby/trackby.component';
     AboutEditComponent,
     DirectiveTextComponent,
     AccessDeniedComponent,
-    TrackbyComponent
+    TrackbyComponent,
+    ViewNoneComponent,
+    ViewEmulatedComponent,
+    ViewShadowDomComponent
   ],
   imports: [
     BrowserModule,
