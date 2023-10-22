@@ -17,6 +17,7 @@ import { ViewEmulatedComponent } from './components/encapsulation/view-emulated/
 import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-dom/view-shadow-dom.component';
 import { ParentComponent } from './components/content-projection/parent/parent.component';
 import { ChildComponent } from './components/content-projection/child/child.component';
+import { ServiceProviderComponent } from './components/providers/service-provider/service-provider.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ChildComponent } from './components/content-projection/child/child.comp
     ViewEmulatedComponent,
     ViewShadowDomComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    ServiceProviderComponent
   ],
   imports: [
     BrowserModule,
