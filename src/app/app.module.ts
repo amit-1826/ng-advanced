@@ -15,6 +15,8 @@ import { TrackbyComponent } from './components/trackby/trackby.component';
 import { ViewNoneComponent } from './components/encapsulation/view-none/view-none.component';
 import { ViewEmulatedComponent } from './components/encapsulation/view-emulated/view-emulated.component';
 import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-dom/view-shadow-dom.component';
+import { ParentComponent } from './components/content-projection/parent/parent.component';
+import { ChildComponent } from './components/content-projection/child/child.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,9 @@ import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-d
     TrackbyComponent,
     ViewNoneComponent,
     ViewEmulatedComponent,
-    ViewShadowDomComponent
+    ViewShadowDomComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
