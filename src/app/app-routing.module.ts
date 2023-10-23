@@ -8,6 +8,7 @@ import {AccessDeniedComponent} from "./components/access-denied/access-denied.co
 import {canActivateUser, canDeactivateUser} from "./services/auth.guard";
 import {TrackbyComponent} from "./components/trackby/trackby.component";
 import { TemplateDrivenFormComponent } from './components/forms/template-driven-form/template-driven-form.component';
+import { TemplateDrivenComponent } from './components/forms/template-driven/template-driven.component';
 
 const routes: Routes = [
   {
@@ -41,6 +42,10 @@ const routes: Routes = [
   {
     path: 'forms-template-drive',
     component: TemplateDrivenFormComponent
+  },
+  {
+    path: 'template-driven',
+    component: TemplateDrivenComponent
   }
 ];
 

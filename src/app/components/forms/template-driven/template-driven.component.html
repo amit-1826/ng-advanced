@@ -1,0 +1,36 @@
+<form #contactForm="ngForm" (ngSubmit)="onSubmit()" novalidate>
+ 
+    <p>
+      <label for="firstname">First Name </label>
+      <input type="text" id="firstname" name="firstname" [maxlength]="10" required [(ngModel)]="contact.firstname">
+    </p>
+   
+    <p>
+      <label for="lastname">Last Name </label>
+      <input type="text" id="lastname" name="lastname" #lastName="ngModel" [maxlength]="10" required [(ngModel)]="contact.lastname">
+      <span *ngIf="lastName.dirty && lastName.touched && lastName?.hasError('required')">
+        {{'Last Name is required'}}
+      </span>
+    </p>
+   
+    <p>
+      <label for="email">email </label>
+      <input type="text" id="email" name="email" email required [(ngModel)]="contact.email">
+    </p>
+   
+    <p>
+      <label for="gender">Geneder </label>
+      <input type="radio" value="male" id="gender" name="gender" [(ngModel)]="contact.gender"> Male
+      <input type="radio" value="female" id="gender" name="gender" [(ngModel)]="contact.gender"> Female
+    </p>
+   
+    <p>
+      <label for="isToc">Accept TOC</label>
+      <input type="checkbox" id="isToc" name="isToc" [(ngModel)]="contact.isToc">
+    </p>
+   
+    <p>
+      <button type="submit" [disabled]="contactForm.invalid">Submit</button>
+    </p>
+   
+  </form>

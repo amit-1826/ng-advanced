@@ -21,6 +21,7 @@ import { ServiceProviderComponent } from './components/providers/service-provide
 import { TestService } from './services/test.service';
 import { TemplateDrivenFormComponent } from './components/forms/template-driven-form/template-driven-form.component';
 import { FormsModule } from '@angular/forms';
+import { TemplateDrivenComponent } from './components/forms/template-driven/template-driven.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { FormsModule } from '@angular/forms';
     ParentComponent,
     ChildComponent,
     ServiceProviderComponent,
-    TemplateDrivenFormComponent
+    TemplateDrivenFormComponent,
+    TemplateDrivenComponent
   ],
   imports: [
     BrowserModule,
