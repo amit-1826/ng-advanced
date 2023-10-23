@@ -18,6 +18,9 @@ import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-d
 import { ParentComponent } from './components/content-projection/parent/parent.component';
 import { ChildComponent } from './components/content-projection/child/child.component';
 import { ServiceProviderComponent } from './components/providers/service-provider/service-provider.component';
+import { TestService } from './services/test.service';
+import { TemplateDrivenFormComponent } from './components/forms/template-driven-form/template-driven-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,14 +37,16 @@ import { ServiceProviderComponent } from './components/providers/service-provide
     ViewShadowDomComponent,
     ParentComponent,
     ChildComponent,
-    ServiceProviderComponent
+    ServiceProviderComponent,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true}],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true}, TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

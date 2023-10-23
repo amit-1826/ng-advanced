@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit} from '@angular/core';
 import { DataService } from 'src/app/services/data.service';
+import { TestService } from 'src/app/services/test.service';
 
 export function factoryFunction(USE_VALUE: string, classValue: DataService) {
   console.log(USE_VALUE);
@@ -24,6 +25,9 @@ export function factoryFunction(USE_VALUE: string, classValue: DataService) {
     },
     {
       provide: 'USE_EXISTING', useExisting: 'USE_VALUE'
+    },
+    {
+      provide: TestService, useClass: TestService
     }
   ]
 })
@@ -32,7 +36,8 @@ export class ServiceProviderComponent implements OnInit {
     @Inject('USE_VALUE') public useValue: string,
     @Inject('USE_CLASS') public dataService: DataService,
     @Inject('USE_FACTORY') public useFactory: any,
-    @Inject('USE_EXISTING') public useExisting: any
+    @Inject('USE_EXISTING') public useExisting: any,
+    private testService: TestService
   ) {
 
   }
