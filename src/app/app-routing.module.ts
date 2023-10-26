@@ -7,6 +7,9 @@ import {DirectiveTextComponent} from "./components/directive-text/directive-text
 import {AccessDeniedComponent} from "./components/access-denied/access-denied.component";
 import {canActivateUser, canDeactivateUser} from "./services/auth.guard";
 import {TrackbyComponent} from "./components/trackby/trackby.component";
+import { TemplateDrivenFormComponent } from './components/forms/template-driven-form/template-driven-form.component';
+import { TemplateDrivenComponent } from './components/forms/template-driven/template-driven.component';
+import { ReactiveComponent } from './components/forms/reactive/reactive.component';
 
 const routes: Routes = [
   {
@@ -31,11 +34,24 @@ const routes: Routes = [
   },
   {
     path: 'access-denied',
-    component: AccessDeniedComponent
+    component: AccessDeniedComponent,
+    title: 'Access Denied'
   },
   {
     path: 'track-by',
     component: TrackbyComponent
+  },
+  {
+    path: 'forms-template-drive',
+    component: TemplateDrivenFormComponent
+  },
+  {
+    path: 'template-driven',
+    component: TemplateDrivenComponent
+  },
+  {
+    path: 'reactive-form',
+    component: ReactiveComponent
   }
 ];
 

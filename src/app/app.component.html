@@ -2,13 +2,30 @@
 <a [routerLink]="'about'">About</a>
 <a [routerLink]="'directive'">Directive</a>
 <a [routerLink]="'track-by'">Track By</a>
+<a [routerLink]="'forms-template-drive'">Template Driven Form</a>
+<a [routerLink]="'template-driven'">Template Driven Form 2</a>
+<a [routerLink]="'reactive-form'">Reactive Form</a>
+
+<br/>
 
 <button (click)="changeBg()">Change Background</button>
 
 <p>This is paragraph from main component.</p>
 
-<app-view-none></app-view-none>
+<app-view-none [bankName]="'Set by inputs property with no @ input property binding'"></app-view-none>
 <app-view-emulated></app-view-emulated>
 <app-view-shadow-dom></app-view-shadow-dom>
+
+
+<p>  Custom string interpolation</p>
+$name$
+
+
+<br/>
+Content projection
+
+<app-parent></app-parent>
+
+<app-service-provider></app-service-provider>
 
 <router-outlet></router-outlet>

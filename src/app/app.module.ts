@@ -15,6 +15,15 @@ import { TrackbyComponent } from './components/trackby/trackby.component';
 import { ViewNoneComponent } from './components/encapsulation/view-none/view-none.component';
 import { ViewEmulatedComponent } from './components/encapsulation/view-emulated/view-emulated.component';
 import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-dom/view-shadow-dom.component';
+import { ParentComponent } from './components/content-projection/parent/parent.component';
+import { ChildComponent } from './components/content-projection/child/child.component';
+import { ServiceProviderComponent } from './components/providers/service-provider/service-provider.component';
+import { TestService } from './services/test.service';
+import { TemplateDrivenFormComponent } from './components/forms/template-driven-form/template-driven-form.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { TemplateDrivenComponent } from './components/forms/template-driven/template-driven.component';
+import { ReactiveComponent } from './components/forms/reactive/reactive.component';
+import { ForbiddenNameValidatorDirective } from './components/forms/template-driven-form/forbidden-name-validator.directive';
 
 @NgModule({
   declarations: [
@@ -28,14 +37,23 @@ import { ViewShadowDomComponent } from './components/encapsulation/view-shadow-d
     TrackbyComponent,
     ViewNoneComponent,
     ViewEmulatedComponent,
-    ViewShadowDomComponent
+    ViewShadowDomComponent,
+    ParentComponent,
+    ChildComponent,
+    ServiceProviderComponent,
+    TemplateDrivenFormComponent,
+    TemplateDrivenComponent,
+    ReactiveComponent,
+    ForbiddenNameValidatorDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true}],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true}, TestService],
   bootstrap: [AppComponent]
 })
 export class AppModule {
