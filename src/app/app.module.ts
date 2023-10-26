@@ -20,8 +20,10 @@ import { ChildComponent } from './components/content-projection/child/child.comp
 import { ServiceProviderComponent } from './components/providers/service-provider/service-provider.component';
 import { TestService } from './services/test.service';
 import { TemplateDrivenFormComponent } from './components/forms/template-driven-form/template-driven-form.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { TemplateDrivenComponent } from './components/forms/template-driven/template-driven.component';
+import { ReactiveComponent } from './components/forms/reactive/reactive.component';
+import { ForbiddenNameValidatorDirective } from './components/forms/template-driven-form/forbidden-name-validator.directive';
 
 @NgModule({
   declarations: [
@@ -40,13 +42,16 @@ import { TemplateDrivenComponent } from './components/forms/template-driven/temp
     ChildComponent,
     ServiceProviderComponent,
     TemplateDrivenFormComponent,
-    TemplateDrivenComponent
+    TemplateDrivenComponent,
+    ReactiveComponent,
+    ForbiddenNameValidatorDirective
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: HttpInterceptor, multi: true}, TestService],
   bootstrap: [AppComponent]

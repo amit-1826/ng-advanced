@@ -2,7 +2,10 @@
  
     <p>
       <label for="firstname">First Name</label>
-      <input type="text" id="firstname" name="firstname" ngModel #fname="ngModel">
+      <input type="text" id="firstname" name="firstname" ngModel #fname="ngModel" appForbiddenNameValidator [forbiddenName]="'Amit'">
+      <span *ngIf="fname.hasError('invalidName')">
+        {{'Invalid name'}}
+      </span>
     </p>
    
     <p>
